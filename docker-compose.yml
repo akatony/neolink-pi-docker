@@ -1,0 +1,11 @@
+---
+version: "3"
+services:
+  neolink:
+    image: neofetch:arm7
+    container_name: neolink
+    ports:
+      - 8554:8554
+    volumes:
+      - $PWD/neolink.toml:/config/neolink.toml
+    restart: unless-stopped
